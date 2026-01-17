@@ -119,8 +119,6 @@ class AmadeusClient {
   async searchFlights(params: SearchParams) {
     const token = await this.getAccessToken();
 
-    console.log('Using access token:', token); 
-
     const queryParams = new URLSearchParams({
       originLocationCode: params.origin,
       destinationLocationCode: params.destination,

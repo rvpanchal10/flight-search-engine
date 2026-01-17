@@ -70,6 +70,7 @@ export const FilterSidebar: React.FC = () => {
           </FormLabel>
           <RadioGroup
             value={filters.stops}
+            /* eslint-disable-next-line  @typescript-eslint/no-explicit-any */
             onChange={(e) => dispatch(setStops(e.target.value as any))}
           >
             <FormControlLabel value="any" control={<Radio size="small" />} label="Any" />

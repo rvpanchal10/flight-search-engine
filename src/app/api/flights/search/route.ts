@@ -1,4 +1,4 @@
-
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 import { NextRequest, NextResponse } from 'next/server';
 import { validateParsedSearchSchema } from '@/features/flight-search/schemas/searchSchema';
 import { amadeusClient } from '@/app/lib/amadeus/client';

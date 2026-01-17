@@ -37,6 +37,7 @@ export const FlightResults: React.FC = () => {
     if (filteredFlights.length > 0 && priceRange.max > 0) {
       dispatch(resetFiltersToMax({ maxPrice: priceRange.max }));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [priceRange.max, dispatch]);
 
   const sortedFlights = React.useMemo(() => {
