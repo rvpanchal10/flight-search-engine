@@ -48,6 +48,9 @@ src/
 │   └── flight-search/
 │       ├── components/
 │       │   ├── AirportAutocomplete.tsx
+│       │   ├── AirlineDistributionChart.tsx
+│       │   ├── DepartureTimeDistribution.tsx
+│       │   ├── StopsDistributionChart.tsx
 │       │   ├── SearchForm.tsx
 │       │   ├── FlightCard.tsx
 │       │   ├── FlightResults.tsx
@@ -119,10 +122,6 @@ npm run build
 ### Amadeus Endpoints Used:
 1. **Airport Search**: `/v1/reference-data/locations`
 2. **Flight Search**: `/v2/shopping/flight-offers`
-
-### Rate Limits (Test Environment):
-- 10 requests/second
-- 100,000 requests/month (free tier)
 
 ### Production:
 - Change `AMADEUS_API_URL` to `https://api.amadeus.com`
