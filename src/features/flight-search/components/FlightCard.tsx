@@ -27,9 +27,9 @@ export const FlightCard: React.FC<FlightCardProps> = ({ flight }) => {
   return (
     <Card elevation={2} sx={{ mb: 2, '&:hover': { elevation: 4 } }}>
       <CardContent>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, flexWrap: 'wrap' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, flexWrap: 'nowrap', alignItems:'stretch' }}>
           {/* Left Section - Flight Details */}
-          <Box sx={{ flex: 1, minWidth: 300 }}>
+          <Box sx={{ flex: 1, minWidth: { xs: 0, md: 300 }, maxWidth: { xs: 420 } }}>
             {/* Airline Header */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
               <Box
@@ -118,7 +118,7 @@ export const FlightCard: React.FC<FlightCardProps> = ({ flight }) => {
               flexDirection: 'column',
               alignItems: 'flex-end',
               justifyContent: 'space-between',
-              minWidth: 160,
+              minWidth: { xs: 120, md: 160 },
             }}
           >
             <Box sx={{ textAlign: 'right' }}>

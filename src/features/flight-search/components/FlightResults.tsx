@@ -54,7 +54,7 @@ export const FlightResults: React.FC = () => {
     }
   }, [filteredFlights, sortBy]);
 
-  if (!searched) {
+  if (!searched && !loading) {
     return (
       <Box sx={{ textAlign: 'center', py: 8 }}>
         <Box
@@ -148,23 +148,23 @@ export const FlightResults: React.FC = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                flexWrap: 'wrap',
+                flexWrap: 'nowrap',
                 gap: 2,
                 mb: 3,
               }}
             >
-              <Box>
+              <Box sx={{ minWidth: 0, flex: 1}}>
                 <Typography variant="h6" fontWeight="bold">
                   {filteredFlights.length} {filteredFlights.length === 1 ? 'Flight' : 'Flights'} Found
                 </Typography>
                 {searchParams && (
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" noWrap>
                     {searchParams.origin} → {searchParams.destination} • {new Date(searchParams.departDate).toLocaleDateString()}
                   </Typography>
                 )}
               </Box>
 
-              <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+              <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center', flexShrink: 0,  }}>
                 <IconButton
                   onClick={() => setMobileFilterOpen(true)}
                   sx={{ display: { xs: 'flex', md: 'none' } }}
@@ -172,7 +172,7 @@ export const FlightResults: React.FC = () => {
                   <FilterList />
                 </IconButton>
 
-                <FormControl size="small" sx={{ minWidth: 180 }}>
+                <FormControl size="small" sx={{ minWidth: { xs: 120, sm: 160, md: 180 }, }}>
                   <InputLabel>Sort by</InputLabel>
                   <Select
                     value={sortBy}
