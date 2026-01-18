@@ -11,10 +11,14 @@ Find the best flight deals with our advanced search engine.
 ```
 
 ### 2. Install Dependencies
+
+#### Using npm
 ```bash
-  npm install @reduxjs/toolkit react-redux react-hook-form @hookform/resolvers zod recharts
-  npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/lab
-  npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event jest jest-environment-jsdom
+  npm install
+```
+#### Or using Yarn
+```bash
+  yarn install
 ```
 
 ### 3. Setup Environment Variables
@@ -102,20 +106,6 @@ Run tests:
   npm test                # Run all tests
   npm run test:coverage   # Coverage report
 ```
-
-## 🚀 Deployment
-
-1. Build for production:
-```bash
-npm run build
-```
-
-2. Deploy to Vercel:
-```bash
-  vercel deploy
-```
-
-3. Set environment variables in Vercel dashboard
 
 ## 📖 API Documentation
 
